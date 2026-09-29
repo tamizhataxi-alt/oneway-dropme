@@ -1,0 +1,14 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  async redirects() {
+    return [{ source: "/tariff", destination: "/services#pricing", permanent: true }];
+  },
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "lh3.googleusercontent.com" },
+      { protocol: "https", hostname: "images.unsplash.com" },
+    ],
+  },
+};
+
+export default nextConfig;
